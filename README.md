@@ -64,7 +64,7 @@ Below is a curated comparison of leading SaaS public records management software
 
 Open-source document management systems (EDMS), document archiving software, and PDF processing utilities offer self-hosted alternatives for government agencies and tech-forward organizations. The table below is sorted by GitHub star count (descending) and features direct stargazer badge links.
 
-| Project / Repository | Star Count ⭐ | License 📜 | Primary Tech Stack 🛠️ | Description 📝 |
+| Project / Repository | Star_Count ⭐ | License 📜 | Primary Tech Stack 🛠️ | Description 📝 |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)** | [![Stars](https://img.shields.io/github/stars/Stirling-Tools/Stirling-PDF?style=social&color=white)](https://github.com/Stirling-Tools/Stirling-PDF/stargazers) | MIT | Java / Spring Boot / Docker | Robust locally hosted web application for PDF manipulation, page extraction, splitting, merging, and redacting public records. |
 | **[Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)** | [![Stars](https://img.shields.io/github/stars/paperless-ngx/paperless-ngx?style=social&color=white)](https://github.com/paperless-ngx/paperless-ngx/stargazers) | GPL-3.0 | Python / Django / Angular | Community-driven document management system focused on automated OCR, full-text indexing, metadata tagging, and digital archiving. |
