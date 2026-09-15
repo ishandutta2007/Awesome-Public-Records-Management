@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <style>
+      @keyframes pulse {
+        0% { opacity: 0.3; transform: scale(0.98); }
+        50% { opacity: 0.8; transform: scale(1.02); }
+        100% { opacity: 0.3; transform: scale(0.98); }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+        100% { transform: translateY(0px); }
+      }
+      @keyframes dash {
+        0% { stroke-dashoffset: 100; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .pulsing-glow {
+        animation: pulse 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .floating-icon {
+        animation: float 5s ease-in-out infinite;
+      }
+      .dashed-line {
+        stroke-dasharray: 8, 8;
+        animation: dash 20s linear infinite;
+      }
+      .title-text {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 800;
+        fill: #ffffff;
+      }
+      .subtitle-text {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 500;
+        fill: #94a3b8;
+      }
+      .badge-text {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #38bdf8;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bg)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40"/>
+    </pattern>
+    <rect width="1200" height="300" fill="url(#grid)"/>
+  </g>
+
+  <!-- Dynamic Glowing Background Elements -->
+  <circle cx="150" cy="150" r="180" fill="url(#glow)" class="pulsing-glow"/>
+  <circle cx="1050" cy="80" r="140" fill="url(#glow)" class="pulsing-glow" style="animation-delay: -2s;"/>
+
+  <!-- Left Side: Dynamic Graphic / Shield & Document Icon -->
+  <g transform="translate(100, 150)" class="floating-icon">
+    <!-- Outer Shield Halo -->
+    <path d="M 0 -70 L 50 -40 L 50 20 Q 0 70 -50 20 L -50 -40 Z" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.6"/>
+    <path d="M 0 -60 L 42 -34 L 42 16 Q 0 58 -42 16 L -42 -34 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+    
+    <!-- Document Lines inside Shield -->
+    <rect x="-20" y="-30" width="40" height="50" rx="4" fill="#0f172a" stroke="#818cf8" stroke-width="1.5"/>
+    <line x1="-12" y1="-18" x2="12" y2="-18" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-12" y1="-8" x2="8" y2="-8" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-12" y1="2" x2="12" y2="2" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-12" y1="12" x2="2" y2="12" stroke="#818cf8" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Lock / Check Badge -->
+    <circle cx="16" cy="16" r="14" fill="#0284c7" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 10 16 L 14 20 L 22 12" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Central Header Text -->
+  <g transform="translate(230, 0)">
+    <!-- Pill Badge -->
+    <rect x="0" y="52" width="280" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+    <text x="14" y="70" class="badge-text">GOVERNMENT TECH &amp; FOIA SUITE</text>
+
+    <!-- Main Title -->
+    <text x="0" y="125" class="title-text" font-size="38">Awesome Public Records Management</text>
+    
+    <!-- Gradient Accent Bar -->
+    <rect x="0" y="142" width="680" height="4" rx="2" fill="url(#accent)"/>
+
+    <!-- Subtitle -->
+    <text x="0" y="178" class="subtitle-text" font-size="18">The Definitive Guide to FOIA Portals, Enterprise Records Management (EDMS)</text>
+    <text x="0" y="204" class="subtitle-text" font-size="18">&amp; Open-Source Archival Ecosystems</text>
+  </g>
+
+  <!-- Right Decorative Network Graphic -->
+  <g transform="translate(980, 150)">
+    <line x1="-60" y1="-40" x2="40" y2="-60" stroke="#38bdf8" stroke-width="1.5" class="dashed-line"/>
+    <line x1="-60" y1="-40" x2="20" y2="40" stroke="#818cf8" stroke-width="1.5" class="dashed-line"/>
+    <line x1="40" y1="-60" x2="60" y2="10" stroke="#c084fc" stroke-width="1.5" class="dashed-line"/>
+    <line x1="20" y1="40" x2="60" y2="10" stroke="#38bdf8" stroke-width="1.5" class="dashed-line"/>
+
+    <circle cx="-60" cy="-40" r="8" fill="#38bdf8"/>
+    <circle cx="40" cy="-60" r="10" fill="#818cf8"/>
+    <circle cx="20" cy="40" r="7" fill="#c084fc"/>
+    <circle cx="60" cy="10" r="9" fill="#38bdf8"/>
+  </g>
+</svg>
